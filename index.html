@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta name="google-site-verification" content="oW2yixAYidsRRykTShg7pkXy2sCrApsPfu7_f0aeJSs" />  <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>NexoWeb Studio — Webs que generan clientes</title>
   <meta name="description" content="Diseñamos y desarrollamos páginas web profesionales para negocios locales. Más clientes, más visibilidad, más resultados." />
@@ -449,6 +449,12 @@
       color: var(--subtle);
       text-decoration: line-through;
       margin-right: 8px;
+    }
+    .plan-price-usd {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: -6px;
+      margin-bottom: 12px;
     }
     .discount-badge {
       display: inline-flex;
@@ -1004,7 +1010,8 @@
       <div class="pricing-card">
         <div class="plan-name">Básico</div>
         <div class="discount-badge">🔥 Oferta por tiempo limitado</div>
-        <div class="plan-price"><span class="plan-price-old">249€</span>199 <span>€</span></div>
+        <div class="plan-price"><span class="plan-price-old">399€</span>299 <span>€</span></div>
+        <p class="plan-price-usd">≈ $342 USD</p>
         <p class="plan-note">Pago único · Precio de lanzamiento</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
@@ -1016,8 +1023,9 @@
           <li><span class="check">✓</span> SEO mínimo</li>
           <li><span class="check">✓</span> Publicación incluida</li>
           <li><span class="check">✓</span> Entrega rápida</li>
-          <li><span class="cross">✗</span> Sin analítica</li>
-          <li><span class="cross">✗</span> Sin soporte post-entrega</li>
+          <li><span class="cross">✗</span> Sin chatbot inteligente</li>
+          <li><span class="cross">✗</span> Sin mantenimiento gratuito</li>
+          <li><span class="cross">✗</span> Sin dominio incluido</li>
         </ul>
         <a href="#contacto" class="btn-plan btn-plan-ghost">Solicitar info</a>
       </div>
@@ -1026,6 +1034,7 @@
       <div class="pricing-card featured">
         <div class="plan-name">Profesional</div>
         <div class="plan-price">499 <span>€</span></div>
+        <p class="plan-price-usd">≈ $571 USD</p>
         <p class="plan-note">Pago único</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
@@ -1034,11 +1043,12 @@
           <li><span class="check">✓</span> Diseño responsive (móvil y ordenador)</li>
           <li><span class="check">✓</span> Formulario y botones de contacto</li>
           <li><span class="check">✓</span> SEO local trabajado</li>
-          <li><span class="check">✓</span> Analítica de visitas incluida</li>
           <li><span class="check">✓</span> Ubicación con Google Maps integrado</li>
           <li><span class="check">✓</span> Redacción y trabajo de contenido</li>
           <li><span class="check">✓</span> Publicación y puesta en marcha</li>
-          <li><span class="check">✓</span> 1 mes de soporte incluido</li>
+          <li><span class="check">✓</span> Chatbot inteligente de preguntas frecuentes</li>
+          <li><span class="check">✓</span> 1 mes de mantenimiento gratis</li>
+          <li><span class="check">✓</span> Dominio de tu web incluido</li>
         </ul>
         <a href="#contacto" class="btn-plan btn-plan-primary">Solicitar info</a>
       </div>
@@ -1046,7 +1056,8 @@
       <!-- Mantenimiento -->
       <div class="pricing-card">
         <div class="plan-name">Mantenimiento</div>
-        <div class="plan-price">19 <span>€/mes</span></div>
+        <div class="plan-price">20 <span>€/mes</span></div>
+        <p class="plan-price-usd">≈ $23 USD/mes</p>
         <p class="plan-note">Sin permanencia · Cancela cuando quieras</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
@@ -1074,6 +1085,11 @@
         </thead>
         <tbody>
           <tr>
+            <td>Precio</td>
+            <td>299 € <span style="color:var(--muted); font-weight:400;">(≈ $342 USD)</span></td>
+            <td>499 € <span style="color:var(--muted); font-weight:400;">(≈ $571 USD)</span></td>
+          </tr>
+          <tr>
             <td>Páginas</td>
             <td>1 página</td>
             <td>5 páginas</td>
@@ -1089,14 +1105,19 @@
             <td>SEO local trabajado</td>
           </tr>
           <tr>
-            <td>Analítica</td>
-            <td>Sin analítica</td>
-            <td>Analítica incluida</td>
+            <td>Chatbot inteligente</td>
+            <td>—</td>
+            <td>Incluido</td>
           </tr>
           <tr>
-            <td>Soporte</td>
-            <td>Sin soporte</td>
-            <td>1 mes de soporte</td>
+            <td>Mantenimiento</td>
+            <td>No incluido</td>
+            <td>1 mes gratis</td>
+          </tr>
+          <tr>
+            <td>Dominio de la web</td>
+            <td>No incluido</td>
+            <td>Incluido</td>
           </tr>
           <tr>
             <td>Ubicación</td>
@@ -1213,7 +1234,7 @@
       </div>
       <div class="faq-item reveal">
         <div class="faq-q">¿Hay costes ocultos o permanencias? <span class="faq-arrow">+</span></div>
-        <div class="faq-a">No. El precio que acordamos es el que pagáis. Sin sorpresas. El mantenimiento mensual es opcional y podéis cancelarlo cuando queráis sin penalización.</div>
+        <div class="faq-a">No. El precio que acordamos es el que pagáis. Sin sorpresas. El pago se divide en dos partes: una señal por adelantado al confirmar el proyecto, y el resto cuando la web esté publicada y en funcionamiento. El mantenimiento mensual es opcional y podéis cancelarlo cuando queráis sin penalización.</div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q">¿La web se verá bien en el móvil? <span class="faq-arrow">+</span></div>
@@ -1253,7 +1274,7 @@
           <div class="contact-icon">🌍</div>
           <div class="contact-detail-text">
             <div class="contact-detail-label">Trabajamos con</div>
-            <div class="contact-detail-value">Negocios de toda España</div>
+            <div class="contact-detail-value">Negocios de todo el mundo</div>
           </div>
         </div>
       </div>
